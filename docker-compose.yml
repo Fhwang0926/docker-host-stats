@@ -1,5 +1,5 @@
 docker-host-stats:
-  image: pitrho/docker-host-stats
+  image: hdh0926/docker-host-stats
   tty: true
   command: -f 30 -cmdn
   links:
