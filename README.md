@@ -5,10 +5,10 @@ aggregator if desired.
 
 ## Usage
 Only requirement is to mount the `/proc` directory in Read-Only mode inside the
-container under `/prochost`. The default behavior will report CPU, Memory, and
+container under `/proc_host`. The default behavior will report CPU, Memory, and
 Disk Utilization of `/` every 5 seconds.
 
-    docker run -v=/proc:/prochost:ro hdh0926/docker-host-stats
+    docker run -v=/proc:/proc_host:ro hdh0926/docker-host-stats
 
 ## Options
 User can optionally pass flags to specify what system stats to report and
@@ -43,12 +43,12 @@ on what frequency.
 
 Report only CPU and Memory every 10 seconds
 
-    docker run -v=/proc:/prochost:ro hdh0926/docker-host-stats -cm -f 10
+    docker run -v=/proc:/proc_host:ro hdh0926/docker-host-stats -cm -f 10
 
 Report CPU, Memory, and Disk Utilization with "FooBar " prefix (add a space
 to the end of your prefix for proper formatting.)
 
-    docker run -v=/proc:/prochost:ro hdh0926/docker-host-stats -cmd -p "FooBar "
+    docker run -v=/proc:/proc_host:ro hdh0926/docker-host-stats -cmd -p "FooBar "
 
 ## Use with cAdvisor
 
