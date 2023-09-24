@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE_TAG="pitrho/docker-host-stats"
+IMAGE_TAG="hdh0926/docker-host-stats"
 
 # Custom die function.
 #
