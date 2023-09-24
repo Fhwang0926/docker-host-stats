@@ -12,13 +12,13 @@ ENV DEBIAN_FRONTEND noninteractive
 # Install build deps
 #
 RUN apt-get update && apt-get -y -q install \
-	python3 \
+    python \
     python-dev \
     python-distribute \
-    python-pip3 \
+    python-pip \
 	&& apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install pyCLI==2.0.3 psutil==4.2.0 requests==2.10.0 python-json-logger==0.1.5
+RUN pip install pyCLI= psutil==4.2.0 requests==2.10.0 python-json-logger==0.1.5
 
 # Copy logger script
 #
